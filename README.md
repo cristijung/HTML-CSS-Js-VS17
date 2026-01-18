@@ -19,15 +19,15 @@
 #### Estrutura da página:
 - Tags básicas: `<head>, <body>, <html>, <!DOCTYPE>`;
 - Títulos (`<h1> a <h6>`);
-- Parágrafos (<p>);
+- Parágrafos (`<p>`);
 - Div e Span
-- Quebras de linha (<br/>);
-- Linhas horizontais (<hr/>);
-- Listas ordenadas (<ol>);
-- Listas não ordenadas (<ul>);
-- Listas de definição (<dl>);
-- Links e atributos (<a>, href, target);
-- Imagem (<img>);
-- Atributos de imagem (src, alt, width, height);
-- Tabelas (<table><tr><td><th>);
-- Atributos de tabelas (colspan, rowspan);
+- Quebras de linha (`<br/>`);
+- Linhas horizontais (`<hr/>`);
+- Listas ordenadas (`<ol>`);
+- Listas não ordenadas (`<ul>`);
+- Listas de definição (`<dl>`);
+- Links e atributos (`<a>, href, target`);
+- Imagem (`<img>`);
+- Atributos de imagem (`src, alt, width, height`);
+- Tabelas (`<table><tr><td><th>`);
+- Atributos de tabelas (`colspan, rowspan`);
