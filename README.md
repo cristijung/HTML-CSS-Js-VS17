@@ -17,8 +17,8 @@
 - Usando o Live Server.
 ---
 #### Estrutura da página:
-- Tags básicas: <head>, <body>, <html>, <!DOCTYPE>;
-- Títulos (<h1> a <h6>);
+- Tags básicas: `<head>, <body>, <html>, <!DOCTYPE>`;
+- Títulos (`<h1> a <h6>`);
 - Parágrafos (<p>);
 - Div e Span
 - Quebras de linha (<br/>);
