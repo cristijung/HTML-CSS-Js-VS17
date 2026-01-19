@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Dados</title>
+    <style>
+      body {
+        font-family: "Montserrat", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Dados de Compra</h1>
+    <hr />
+    <h2>Exemplo básico</h2>
+    <table border="1">
+      <tr>
+        <th>Nome</th>
+        <th>Profissão</th>
+        <th>Idade</th>
+      </tr>
+
+      <tr>
+        <td>Ana Banana</td>
+        <td>Engenheira de Software</td>
+        <td>28</td>
+      </tr>
+
+      <tr>
+        <td>Beto Cerqueira</td>
+        <td>Engenheiro de Software</td>
+        <td>35</td>
+      </tr>
+
+      <tr>
+        <th>Endereço</th>
+        <th>Cidade</th>
+        <th>País</th>
+      </tr>
+
+      <tr>
+        <td>Rua ABC</td>
+        <td>Porto Alegre - RS</td>
+        <td>BR</td>
+      </tr>
+    </table>
+
+    <hr />
+    <p>Tabela com atributo de Colspan</p>
+    <table border="2">
+      <tr>
+        <td colspan="2">Lista de Compras</td>
+      </tr>
+
+      <tr>
+        <td>Pão</td>
+        <td>Leite</td>
+      </tr>
+      
+      <hr/>
+      <p>Tabela com atributo de Rowspan</p>
+      <!-- Tabela com elementos semânticos -->
+      <table border="2">
+        <thead>
+            <tr>
+            <th>Departamento</th>
+            <th>Funcionário</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td rowspan="2">Vendas</td>
+                <td>Pafúncio Silva</td>
+            </tr>
+
+            <tr>                
+                <td>Bia Souza</td>
+            </tr>
+
+            <tr>                
+                <td rowspan="2">TI</td>
+                <td>Marcela Pinheiro</td>
+            </tr>
+
+            <tr>                
+                <td>Josefo Pessoa</td>
+            </tr>
+
+        </tbody>
+      </table>
+
+      <a href="./index.html">Voltar a Home</a>
+
+  </body>
+</html>
