@@ -1,0 +1,58 @@
+
+body {
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;    
+}
+
+section {
+    max-width: 80%;
+    margin: auto;
+    background-color:cornsilk;
+    color:darkslategrey;
+}
+
+.imagem {
+    width: 300px;
+    height: auto;
+    cursor: pointer;    
+}
+
+.container {
+    width: 400px;
+    height: auto;
+    border: 2px solid purple;
+    border-radius: 6px;
+    background: #FFF;
+    text-align: center;    
+}
+
+a {
+    color:#f00;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+a:hover {
+    color: blueviolet;
+    font-size: 20px;
+    background-color: black;    
+}
+
+h1, h2 {
+    color:darksalmon;
+}
+input {
+    border: #f00 solid 1px;
+    border-radius: 4px;
+}
+
+#layout {
+    max-width: 100%;
+}
+
+/* nomenclatura BEM
+block, elemento, modificar */
+.container-imagem {
+    width: 80%;
+    border-radius: 5px;
+}
