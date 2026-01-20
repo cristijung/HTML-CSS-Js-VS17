@@ -1,0 +1,93 @@
+/* Reset básico para remover margens padrões do nav */
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Seletor de classe para o cabeçalho */
+.site-header {
+    background-color: #012361;
+    color: #ccc;
+    padding: 1px 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-header a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+.post-header {
+    max-width: 100%;
+    background-color: #333;
+    color: #e3a304;
+    padding: 10px;
+}
+
+/* Layout --> main e aside */
+.layout-container {
+    display: flex;
+    max-width: 80%;
+    margin: 20px auto;
+    padding: 0 20px;
+    gap: 20px;
+}
+
+.logo {
+    max-width: 40%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid #425374;
+}
+
+/* o main vai ocupar 70% da tela - flex */
+main {
+    flex: 3;     
+    background-color: #9ab7ec;
+    padding: 20px;
+    border-radius: 8px;
+    height: fit-content;
+}
+
+/* o aside vai ocupar 30% da tela - flex */
+aside {
+    flex: 1;
+    float: left;
+    background-color: #425374;
+    padding: 20px;
+    border-radius: 8px;
+    height: fit-content;  /* altura ajustada ao conteúdo */
+}
+
+article {
+    flex: 1.9;
+    float: right;
+    background-color: #ecedef;
+    padding: 20px;
+    border-radius: 8px;
+    height: fit-content; 
+}
+
+footer {
+    background-color: #000;
+    clear: both;
+    color: #ccc;
+    text-align: center;
+    padding: 1px;
+    margin-top: 20px;
+}
+
+h1 {
+    color: #f1b707;    
+}
+
+.author {
+    font-style: italic;
+    color: #c4e4f4;
+}
