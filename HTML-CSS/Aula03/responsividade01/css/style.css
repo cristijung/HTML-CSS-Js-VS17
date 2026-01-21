@@ -1,0 +1,83 @@
+/* este é um exemplo + simples de reset -- é o tosco
+body {
+    propriedade: valor;
+} */
+
+
+/* reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+footer {
+    background-color: black;
+    color: aliceblue;
+}
+
+/* ESTILO MOBILE FIRST --> padrão */
+header, main, footer {
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+    background-color: aliceblue;
+    text-align: center;
+}
+
+nav ul li {
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+
+.conteudo {
+    width: 100%;
+}
+
+
+
+/* ESTILO DESKTOP --> padrão */
+/* breakpoints */
+@media (min-width: 768px) {
+    nav ul {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    nav ul li {
+        display: inline-block;
+        border-bottom: none;
+        margin-left: 20px;
+  }
+
+  main {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .conteudo {
+    width: 60%;
+  }
+
+  aside {
+    width: 40%;
+  }
+
+}
