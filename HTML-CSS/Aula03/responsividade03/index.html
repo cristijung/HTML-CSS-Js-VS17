@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chroma - Escola de Artes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">  
+  </head>
+  <body>
+    <header class="hero">
+      <div class="container">
+        <div class="hero-content animate-fade-up">
+          <h1>Crie o seu mundo.</h1>
+          <p>Descubra seu talento em nossa escola de artes multidisciplinar.</p>
+          <a href="#contato" class="btn-cta">Matricule-se Agora</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="cursos">
+      <div class="container">
+        <h2 class="animate-fade-up">Nossos Cursos</h2>
+        <div class="grid-cards">
+          <article class="card cor-1 animate-fade-up">
+            <h3>Pintura a Óleo</h3>
+            <p>
+              Domine as técnicas clássicas e a teoria das cores em telas
+              vibrantes.
+            </p>
+          </article>
+
+          <article class="card cor-2 animate-fade-up">
+            <h3>Aquarela</h3>
+            <p>
+              A leveza e a fluidez da água traduzidas em obras de arte
+              delicadas.
+            </p>
+          </article>
+
+          <article class="card cor-3 animate-fade-up">
+            <h3>Escultura</h3>
+            <p>Dê vida e forma tridimensional à argila, madeira e pedra.</p>
+          </article>
+
+          <article class="card cor-4 animate-fade-up">
+            <h3>Arte Digital</h3>
+            <p>
+              Do tablet para o mundo. Ilustração vetorial e pintura digital.
+            </p>
+          </article>
+
+          <article class="card cor-5 animate-fade-up">
+            <h3>Fotografia</h3>
+            <p>Aprenda a capturar a luz e a compor cenários inesquecíveis.</p>
+          </article>
+
+          <article class="card cor-6 animate-fade-up">
+            <h3>Teatro</h3>
+            <p>Expressão corporal e vocal para quem quer brilhar nos palcos.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="contato">
+      <div class="container">
+        <h2 class="animate-fade-up">Vamos Conversar?</h2>
+        <form class="form-art animate-fade-up">
+          <div class="input-group">
+            <label for="nome">Seu Nome</label>
+            <input type="text" id="nome" placeholder="Ex: Leonardo da Vinci" />
+          </div>
+
+          <div class="input-group">
+            <label for="email">Seu E-mail</label>
+            <input type="email" id="email" placeholder="artista@email.com" />
+          </div>
+
+          <div class="input-group">
+            <label for="interesse">Qual curso te interessa?</label>
+            <select id="interesse">
+              <option>Pintura</option>
+              <option>Escultura</option>
+              <option>Arte Digital</option>
+              <option>Outros</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn-submit">Enviar Interesse</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2026 Chroma Escola de Artes.</p>
+    </footer>
+
+    <!-- aqui é um script Js -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const animatedElements = document.querySelectorAll(".animate-fade-up");
+        const observerOptions = {
+          root: null,
+          rootMargin: "0px",
+          threshold: 0.15,
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("active");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, observerOptions);
+        animatedElements.forEach((el) => {
+          observer.observe(el);
+        });
+      });
+    </script>
+  </body>
+</html>

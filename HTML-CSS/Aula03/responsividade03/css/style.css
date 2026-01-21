@@ -1,0 +1,238 @@
+/* --- reset e variáveis de cor --- */
+:root {
+    /* Paleta */
+    --c-red: #ff6b6b;
+    --c-orange: #feca57;
+    --c-yellow: #ff9f43; 
+    --c-green: #1dd1a1;
+    --c-blue: #54a0ff;
+    --c-purple: #5f27cd;
+    
+    --bg-light: #f7f9fc;
+    --text-dark: #2d3436;
+    --text-light: #ffffff;
+
+    /* fontes */
+    --font-main: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* define 1rem = 16px (padrão) mas permite escalabilidade se o usuário der zoom */
+    font-size: 100%; 
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden; /* previne rolagem horizontal indesejada durante animações */
+}
+
+/* --- aqui são as classes e estilos do layout utilitário --- */
+.container {
+    width: 90%; 
+    max-width: 75rem; /* trava em aprox 1200px */
+    margin: 0 auto; /* centraliza */
+}
+
+/* --- hero section --- */
+.hero {
+    /* altura relativa à viewport */
+    min-height: 60vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* gradiente */
+    background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+    padding: 2rem 0;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem); /* tamanho fluido: min, ideal, max */
+    font-weight: 900;
+    background: linear-gradient(to right, var(--c-red), var(--c-orange), var(--c-green), var(--c-blue), var(--c-purple));
+    -webkit-background-clip: text;  /* aqui é só um aviso de q se adiante eu parar de usar um motor webkit, pode quebrar */
+    -webkit-text-fill-color: transparent; 
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    max-width: 60ch; /* limita a largura para aprox 60 caracteres --> bom para leitura */
+    margin: 0 auto 2rem auto;
+    color: #636e72;
+}
+
+.btn-cta {
+    display: inline-block;
+    padding: 1em 2em; /* relativo ao tamanho da fonte do btn */
+    background-color: var(--text-dark);
+    color: var(--text-light);
+    text-decoration: none;
+    border-radius: 50rem; /* pílula redonda*/
+    font-weight: 700;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-cta:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+}
+
+/* --- grid de cursos --- */
+.cursos {
+    padding: 4rem 0;
+}
+
+.cursos h2, .contato h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.grid-cards {
+    display: grid;
+    /* cria colunas automaticamente com largura mínima de 18rem ---> aprox 280px */
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.25rem 1rem rgba(0,0,0,0.05);    
+    transition: transform 0.3s ease, opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border-top: 0.5rem solid transparent; /* espacinho p a cor */
+}
+
+/* hover state - só move um pouco para cima */
+.card:hover {
+    transform: translateY(-0.5rem) !important; /* !important para garantir que sobrescreva a animação de entrada se o mouse já estiver em cima */
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5em;
+}
+
+/* cores dos cards */
+.cor-1 { border-color: var(--c-red); }
+.cor-1 h3 { color: var(--c-red); }
+
+.cor-2 { border-color: var(--c-orange); }
+.cor-2 h3 { color: var(--c-orange); }
+
+.cor-3 { border-color: var(--c-yellow); }
+.cor-3 h3 { color: var(--c-yellow); }
+
+.cor-4 { border-color: var(--c-green); }
+.cor-4 h3 { color: var(--c-green); }
+
+.cor-5 { border-color: var(--c-blue); }
+.cor-5 h3 { color: var(--c-blue); }
+
+.cor-6 { border-color: var(--c-purple); }
+.cor-6 h3 { color: var(--c-purple); }
+
+/* --- form --- */
+.contato {
+    padding: 4rem 0;
+    background-color: #fff;
+}
+
+.form-art {
+    max-width: 35rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.input-group input, 
+.input-group select {
+    padding: 1rem;
+    border: 2px solid #dfe6e9;
+    border-radius: 0.5rem;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    outline: none;
+    border-color: var(--text-dark);
+}
+
+.btn-submit {
+    padding: 1.2em;
+    background: linear-gradient(to right, var(--c-blue), var(--c-purple));
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.btn-submit:hover {
+    opacity: 0.9;
+}
+
+/* --- footer --- */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--text-dark);
+    color: var(--text-light);
+    font-size: 0.875rem;
+}
+
+/* --- anima de scroll --> ScrollReveal --- */
+
+/* estado inicial --> antes de entrar na tela */
+.animate-fade-up {
+    opacity: 0;
+    /* começa 40px abaixo da posição original */
+    transform: translateY(40px); 
+    /* define como a transição ocorrerá. aqui vai um cubic-bezier para um movimento mais elegante que o 'ease' padrão */
+    transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* estado Final --> quando o JS adiciona a classe .active */
+.animate-fade-up.active {
+    opacity: 1;    
+    transform: translateY(0);
+}
+
+/* add: atraso escalonado para os cards em telas maiores */
+@media (min-width: 768px) {
+    .grid-cards .card:nth-child(2) { transition-delay: 0.1s; }
+    .grid-cards .card:nth-child(3) { transition-delay: 0.2s; }
+    .grid-cards .card:nth-child(4) { transition-delay: 0.3s; }
+    .grid-cards .card:nth-child(5) { transition-delay: 0.4s; }
+    .grid-cards .card:nth-child(6) { transition-delay: 0.5s; }
+}
+
