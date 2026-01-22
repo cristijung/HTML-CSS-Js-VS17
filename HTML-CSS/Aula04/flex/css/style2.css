@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.container-flex {
+    display: flex; /* define o container flex */
+    flex-direction: column; /* organiza os itens em coluna */
+    background-color: #9b59b6; /* Roxo */
+    padding: 20px;
+    border-radius: 8px;
+    gap: 10px;
+    width: 200px; 
+    height: 400px; 
+    justify-content: space-around; 
+    align-items: center; 
+}
+
+.item {
+    width: 80px;
+    height: 80px;
+    border-radius: 4px;
+}
+
+.item-a {
+    background-color: #3498db; 
+}
+
+.item-b {
+    background-color: #27ae60; 
+}
+
+.item-c {
+    background-color: #e67e22; 
+}
