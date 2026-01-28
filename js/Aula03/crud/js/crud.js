@@ -1,7 +1,7 @@
 
 const usuarios = [
     {id: 1, nome: 'Ana Banana', email: 'ana@teste.com'},
-    {id: 2, nome: 'Anica vatore', email: 'anica@teste.com'},
+    {id: 2, nome: 'Anica Vatore', email: 'anica@teste.com'},
     {id: 3, nome: 'Caleb Vatore', email: 'caleb@teste.com'},
 ];
 
