@@ -28,7 +28,7 @@ async function fetchImages(numberOfImages) {
     const data = await response.json();
     return data.map((item) => item.url);
   } catch (error) {
-    console.log("Ocorreu um errro com a operação Fetch", error);
+    console.log("Ocorreu um erro com a operação Fetch", error);
     return [];
   }
 }
