@@ -6,3 +6,8 @@
 2. acessar o diretório onde o arquivo está
 3. digitar: `tsc nome-do-arquivo.ts`
 4. depois, `node nome-do-arquivo.js`
+
+## Para criar um arquivo tsconfig.json
+1. Primeira maneira --> já tendo o Node e o Ts instalado
+    - `npx tsc --init`
+    - este comando cria um tsconfig padrão
