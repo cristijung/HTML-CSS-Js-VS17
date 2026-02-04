@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Livraria & Papelaria</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link href="./css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <h1>Papelaria & Livraria</h1>
+      <nav>
+        <ul>
+            <li><a href="#">Produtos</a></li>
+            <li><a href="#">Cadastro de Produtos</a></li>
+        </ul>
+    </nav>
+    </header>
+    <main>
+        <section id="cadastro-produto" class="container">
+            <h2>Cadastro de Produto</h2>
+            <form id="form-cadastro-produto">
+                <div>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required placeholder="Digite o nome do produto" />
+                </div>
+
+                <div>
+                    <label for="descricao">Descrição:</label>
+                    <textarea id="descricao" name="descricao" placeholder="Digite uma breve descrição do produto"></textarea>
+                </div>
+
+                <div>
+                    <label for="codigo">Código:</label>
+                    <input type="text" id="codigo" name="codigo" required />
+                </div>
+
+                <div>
+                    <label for="preco-custo">Preço de Custo:</label>
+                    <input type="number" id="preco-custo" name="preco-custo" step="0.01"/>
+                </div>
+
+                 <div>
+                    <label for="preco-venda">Preço de Venda:</label>
+                    <input type="number" id="preco-venda" name="preco-venda" step="1"/>
+                </div>
+
+                 <div>
+                    <label for="estoque">Estoque:</label>
+                    <input type="number" id="estoque" name="preco-custo" step="1"/>
+                </div>
+
+                <div>
+                    <label for="categoria">Categoria:</label>
+                    <select id="categoria" name="categoria">
+                        <option value="livro">Livro</option>
+                        <option value="material-escolar">Material Escolar</option>
+                        <option value="escritorio">Escritório</option>
+                    </select>
+                </div>
+
+                <button type="submit">Cadastrar Produto</button>
+
+            </form>
+        </section>
+
+        <section id="lista-produtos" class="container">
+            <h2>Lista de Produtos</h2>
+            <table id="tabela-produtos">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Código</th>
+                        <th>Preço de Venda</th>
+                        <th>Estoque</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Sistema de Papelaria & Livraria</p>
+    </footer>
+
+    
+    <script src="./js/script.js"></script> 
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

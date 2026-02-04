@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "outDir": "./js",     // Os arquivos JS transpilados irão para uma nova pasta /js
+    "rootDir": "./ts",    // Onde estão seus arquivos .ts originais
+    "target": "ES6",      // Versão do JS moderna para navegadores
+    "module": "ESNext", 
+    "strict": true
+  }
+}
